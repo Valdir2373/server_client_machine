@@ -7,7 +7,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "clean": "npx rimraf dist",
-    "build": "npm run clean && npx tsc --noEmit && babel src --out-dir dist --extensions \".ts,.js\" --out-file-extension .cjs --source-maps inline && copyfiles -f \"test/data/*.pdf\" dist/test/data",
+    "build": "npm run clean && npx tsc --noEmit && babel src --out-dir dist --extensions \".ts,.js\" --out-file-extension .cjs --source-maps inline",
     "start": "node dist/main.cjs"
   },
   "keywords": [],
