@@ -1,4 +1,3 @@
-import { FileInfo } from "basic-ftp";
 import { UserInputDto } from "../../application/users/DTO/InputUser";
 import { UserOutputDto } from "../../application/users/DTO/OutputUser";
 import { CreateUser } from "../../application/users/useCase/CreateUser";
@@ -10,7 +9,6 @@ import { IMessageQueueMachineRepository } from "../../domain/repository/IMessage
 import { IMessageQueueUserRepository } from "../../domain/repository/IMessageQueueUserRepository";
 import { IUsersRepository } from "../../domain/repository/IUsersRepository";
 import { IResponse } from "../server/interfaces/IResponse";
-import fs from "fs/promises";
 
 export class UsersService {
   private createUser: CreateUser;
