@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    // ALTERAÇÃO CRUCIAL: Mudar o módulo de saída para CommonJS.
+    "module": "CommonJS",
+
+    // Altera a resolução de módulo para o padrão Node, que é mais flexível.
+    "moduleResolution": "node",
+
+    "target": "ES2022",
+
+    // Permite que importações padrão (ex: import express from "express") funcionem com módulos CommonJS.
+    "esModuleInterop": true,
+
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "lib": ["es2022", "dom"],
+    "noImplicitAny": true,
+    "strictFunctionTypes": true,
+    "isolatedModules": true, // Nota: isolatedModules é melhor para ESNext, mas pode ser mantido aqui.
+    "alwaysStrict": true
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules"]
+}

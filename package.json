@@ -1,0 +1,36 @@
+{
+  "name": "teste",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "npx rimraf dist",
+    "build": "npm run clean && npx tsc --noEmit && babel src --out-dir dist --extensions \".ts,.js\" --out-file-extension .cjs --source-maps inline && copyfiles -f \"test/data/*.pdf\" dist/test/data",
+    "start": "node dist/main.cjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0",
+    "multer": "^2.0.2",
+    "typescript": "^5.9.3",
+    "ws": "^8.18.3"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.28.3",
+    "@babel/core": "^7.28.5",
+    "@babel/plugin-proposal-class-properties": "^7.18.6",
+    "@babel/plugin-proposal-decorators": "^7.28.0",
+    "@babel/preset-env": "^7.28.5",
+    "@babel/preset-typescript": "^7.28.5",
+    "@types/express": "^5.0.5",
+    "@types/multer": "^2.0.0",
+    "@types/ws": "^8.18.1",
+    "babel-plugin-add-import-extension": "^1.6.0",
+    "babel-plugin-module-resolver": "^5.0.2",
+    "rimraf": "^6.1.2"
+  }
+}
